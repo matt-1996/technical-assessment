@@ -13,8 +13,9 @@ return new class extends Migration {
             $table->foreignId('product_id')->constrained('products');
             $table->foreignId('warehouse_id')->constrained('warehouses');
             $table->enum('type', array_column(\App\Enums\StockMovementsEnum::cases(), 'value') );
-            $table->integer('quantity');
+            $table->integer('quantity')->default(0);
             $table->text('reference');
+            $table->json('meta')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
