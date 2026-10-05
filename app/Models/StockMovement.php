@@ -17,4 +17,11 @@ class StockMovement extends Model
         'quantity',
         'reference',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'meta' => 'array',
+        ];
+    }
 }

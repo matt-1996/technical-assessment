@@ -1,0 +1,32 @@
+[
+    {
+        "tenant_id": 1,
+        "product_id": 1,
+        "warehouse_id": 1,
+        "type": "in",
+        "quantity": 10,
+        "reference": "none",
+        "meta": {}
+    },
+    {
+        "tenant_id": 1,
+        "product_id": 1,
+        "warehouse_id": 1,
+        "type": "transfer",
+        "quantity": 3,
+        "reference": "none",
+        "meta": {
+            "from_warehouse_id": 1,
+            "to_warehouse_id": 2
+        }
+    },
+    {
+        "tenant_id": 1,
+        "product_id": 1,
+        "warehouse_id": 1,
+        "type": "out",
+        "quantity": 6,
+        "reference": "none",
+        "meta": {}
+    }
+]
