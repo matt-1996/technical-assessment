@@ -1,0 +1,38 @@
+[
+    {
+        "tenant_id": 1,
+        "sku": "PDT-0001",
+        "name": "مودم همراه مدل 4G",
+        "unit_price": 4500000
+    },
+    {
+        "tenant_id": 1,
+        "sku": "PDT-0002",
+        "name": "مودم همراه مدل 5G",
+        "unit_price": 6500000
+    },
+    {
+        "tenant_id": 2,
+        "sku": "PDT-0001",
+        "name": "مودم ADSL",
+        "unit_price": 1200000
+    },
+    {
+        "tenant_id": 2,
+        "sku": "PDT-0021",
+        "name": "مودم نسل چهار",
+        "unit_price": 3680000
+    },
+    {
+        "tenant_id": 3,
+        "sku": "PDT-00352",
+        "name": "Access Point Iran Afzar",
+        "unit_price": 5600000
+    },
+    {
+        "tenant_id": 3,
+        "sku": "PDT-00519",
+        "name": "Cisco Router",
+        "unit_price": 12000000
+    }
+]
