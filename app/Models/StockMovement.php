@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\StockMovementsEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -21,6 +22,7 @@ class StockMovement extends Model
     protected function casts(): array
     {
         return [
+            'type' => StockMovementsEnum::class,
             'meta' => 'array',
         ];
     }
