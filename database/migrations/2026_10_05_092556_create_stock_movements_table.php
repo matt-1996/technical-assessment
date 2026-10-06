@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->integer('quantity')->default(0);
             $table->text('reference');
             $table->json('meta')->nullable();
+            $table->index(['tenant_id', 'product_id', 'type']);
             $table->softDeletes();
             $table->timestamps();
         });

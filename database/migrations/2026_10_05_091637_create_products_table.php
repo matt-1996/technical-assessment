@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->string('name', 100);
             $table->bigInteger('unit_price');
             $table->unique(['tenant_id', 'sku']);
+            $table->index(['tenant_id', 'sku']);
             $table->softDeletes();
             $table->timestamps();
         });
