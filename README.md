@@ -12,7 +12,7 @@ some part of the project could be cleaner with better decisions like When a stoc
 database transaction with row-level locking ( SELECT ... FOR UPDATE ). I could use Event/Listener
 Or put Create records in a Queue For Better Performance but i decided to keep it simple because of lack of time
 
-
+## Also Postman Collection Included into Project
 # Installation
 clone the Project
 <br>
@@ -30,3 +30,5 @@ clone the Project
 ## Reconcile Command
 
 `php artisan inventory:reconcile {tenant : Tenant ID}`
+
+

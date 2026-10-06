@@ -1,0 +1,166 @@
+{
+  "info": {
+    "name": "technical-assessment",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Stock Level",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-Tenant-ID",
+            "value": "1",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://{{domain}}/api/stock-levels?page=1&warehouse_id=2&product_id=1",
+          "protocol": "http",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "stock-levels"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "warehouse_id",
+              "value": "2"
+            },
+            {
+              "key": "product_id",
+              "value": "1"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "a",
+              "value": "b",
+              "disabled": false,
+              "type": "default",
+              "description": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Product SKU History",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-tenant-ID",
+            "value": "1",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://{{domain}}/api/products/PDT-0001/history",
+          "protocol": "http",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "products",
+            "PDT-0001",
+            "history"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Stock Movements",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-tenant-ID",
+            "value": "1",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://{{domain}}/api/stock-movements",
+          "protocol": "http",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "stock-movements"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "product_id",
+              "value": "1",
+              "disabled": false,
+              "type": "default",
+              "description": ""
+            },
+            {
+              "key": "warehouse_id",
+              "value": "2",
+              "disabled": false,
+              "type": "default",
+              "description": ""
+            },
+            {
+              "key": "type",
+              "value": "out",
+              "disabled": false,
+              "type": "default",
+              "description": ""
+            },
+            {
+              "key": "quantity",
+              "value": "11",
+              "disabled": false,
+              "type": "default",
+              "description": ""
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "domain",
+      "value": "technical-assessment.ru",
+      "type": "default"
+    }
+  ]
+}
