@@ -17,7 +17,7 @@ class ResolveTenantMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $tenant_id = $request->header('tenant_id');
+        $tenant_id = $request->header('X-Tenant-ID');
 
         abort_unless($tenant_id, 400 , 'Tenant is required');
 
