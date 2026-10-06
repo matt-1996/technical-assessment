@@ -5,31 +5,18 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StockLevelIndexRequest;
 use App\Http\Resources\StockLevelResource;
+use App\Interfaces\StockLevelRepositoryInterface;
 use App\Models\StockLevel;
 
 class StockLevelController extends Controller
 {
+    private StockLevelRepositoryInterface $stockLevelRepository;
+    public function __construct(StockLevelRepositoryInterface $stockLevelRepository)
+    {
+        $this->stockLevelRepository = $stockLevelRepository;
+    }
     public function index(StockLevelIndexRequest $request)
     {
-        $query = StockLevel::query()
-            ->orderBy('id');
-
-        $query->when(
-            $request->integer('product_id'),
-            fn ($query, $productId) =>
-            $query->where('product_id', $productId)
-        );
-
-        $query->when(
-            $request->integer('warehouse_id'),
-            fn ($query, $warehouseId) =>
-            $query->where('warehouse_id', $warehouseId)
-        );
-
-        $stockLevels = $query->paginate(
-            $request->integer('per_page', 20)
-        );
-
-        return StockLevelResource::collection($stockLevels);
+        return StockLevelResource::collection($this->stockLevelRepository->get($request->product_id,$request->warehouse_id, $request->page, $request->per_page));
     }
 }
