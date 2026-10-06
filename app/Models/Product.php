@@ -16,4 +16,14 @@ class Product extends Model
         'name',
         'unit_price',
     ];
+
+    public function stockMovements()
+    {
+        return $this->hasMany(StockMovement::class);
+    }
+
+    public function stockLevels()
+    {
+        return $this->hasMany(StockLevel::class);
+    }
 }
